@@ -15,6 +15,16 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  build:
+    run-on: ubuntu-latest
+  steps:
+-name: 1. Pegar o chassi do carro (código-fonte)
+uses: actions/checkout@v3
+
+name: 1.5. Fabricar o produto
+run: echo &quot;Este é o nosso produto final!&quot; &gt; produto.txt
+-name: 2. Estação de Build (Montagem)
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
